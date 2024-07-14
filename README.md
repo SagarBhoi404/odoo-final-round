@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Library Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive Library Management System built with the MERN stack (MongoDB, Express.js, React.js, Node.js) that allows users to manage book inventories, track borrower details, and handle transactions efficiently.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Management**
 
-### `npm start`
+  - Login/Logout functionality for Admin, Librarians, and Users.
+  - Role-based access control: Admin, Librarian, and User roles.
+  - Signup With Google
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Book Inventory Management**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - Add, update, delete, and search for books.
+  - Book details: ISBN, title, author, publisher, year, genre, quantity.
+  - Real-time availability status.
 
-### `npm test`
+- **Borrowing System**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - Checkout process for borrowing books.
+  - Return process including due dates and late fees calculation.
+  - History tracking for each user's borrowed and returned books.
 
-### `npm run build`
+- **Search and Recommendations**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - Advanced search options (by title, author, genre, etc.).
+  - Book recommendations based on user history or popular trends.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Notifications and Alerts**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - Email or SMS notifications for due dates, new arrivals, etc.
+  - Alerts for overdue books and outstanding fees.
 
-### `npm run eject`
+- **Reporting**
+  - Generate reports on book usage, overdue items, user activity, etc.
+  - Dashboard for admins and librarians to see real-time statistics.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies and Tools
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Frontend:**
+  - React.js
+  - Redux (for state management)
+  - React Router (for navigation)
+  - Material-UI (for UI components)
+- **Backend:**
+  - Node.js
+  - Express.js
+  - MongoDB (with Mongoose)
+  - JWT (for authentication)
+- **Other Tools:**
+  - Cloudinary (for image storage)
+  - Nodemailer (for sending emails)
+  - Swagger (for API documentation)
+  - dotenv (for environment variables)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/SagarBhoi404/odoo-final-round.git
+   cd odoo-final-round
+   cd client
+   npm install
+   npm start
+   cd server
+   npm install
+   npm run dev
 
-## Learn More
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Environment Variables
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run this project, you will need to add the following environment variables to your .env file
 
-### Code Splitting
+`MONGO_URI`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`JWT_SECRET`
 
-### Analyzing the Bundle Size
+#Google OAuth
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`CLIENT_ID`
 
-### Making a Progressive Web App
+`CLIENT_SECRET`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`CLIENT_URL`
